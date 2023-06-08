@@ -1,4 +1,5 @@
 name: ESLint
+run-name: ESLint 📟
 
 on:
   push:

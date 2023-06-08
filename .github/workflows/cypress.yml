@@ -1,5 +1,5 @@
 name: Cypress Tests
-run-name: Cypress test
+run-name: Cypress testw
 
 on:
   push:
