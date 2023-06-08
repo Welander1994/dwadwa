@@ -1,4 +1,5 @@
 name: Cypress Tests
+run-name: Cypress test
 
 on:
   push:
@@ -23,3 +24,5 @@ jobs:
         run: |
           npm run serve &
           npx cypress run
+
+
