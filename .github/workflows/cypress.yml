@@ -1,24 +1,25 @@
-name: Cypress Tests  
+name: Cypress Tests
 
-on:   
-	push:     
-	branches:       
-		- main   
-	pull_request:     
-		branches:       
-		- main  
-	
-jobs:   
-	cypress:     
-		runs-on: ubuntu-latest      
-		
-		steps:       
-			- name: Checkout code
-			- uses: actions/checkout@v2
-				
-			- name: Install dependencies
-			- run: npm install       
-				
-			- name: Run Cypress tests    
-      - run: npm run serve     
-			- run: npx cypress run    
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  cypress:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Cypress tests
+        run: |
+          npm run serve &
+          npx cypress run
