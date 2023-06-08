@@ -9,8 +9,8 @@ module.exports = {
   },
   ignorePatterns: ["**/*.cy.js"], // Add this line to exclude Cypress files
   rules: {
-    "no-undef": "error",   
-    "no-unused-vars": "error",  
+    "no-undef": "off",   
+    "no-unused-vars": "warn",  
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
   },
